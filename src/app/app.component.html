@@ -29,6 +29,15 @@
     </div>
     <div>
       <h1>Datos de los usuarios</h1>
+      <div class="my-5" *ngFor="let user of users">
+        <div>{{ user.name }} - {{ user.email }}</div>
+        <button
+          class="bg-red-200 p-1 rounded hover:bg-red-300"
+          (click)="deleteUser(user)"
+        >
+          Borrar
+        </button>
+      </div>
     </div>
   </div>
 </section>
