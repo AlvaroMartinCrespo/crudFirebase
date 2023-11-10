@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   async onSubmit() {
     // Add user
     const res = await this.userService.addUser(this.form.value);
+    this.form.reset();
   }
 
   async deleteUser(user: User) {
